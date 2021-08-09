@@ -1,3 +1,5 @@
+#!/usr/bin/env/python3
+
 import random
 
 num_list = [5, 43, 34, 98, 22, 133, 72, 55]
