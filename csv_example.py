@@ -6,8 +6,14 @@ character_list = []
 character_name = ""
 secret_identity = ""
 
+def write_characters(character_list):
+    with open(FILENAME, "w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerows(character_list)
+
 def add_character(name, identity):
-    character_list.append([name, identity])
+        marvel_character = [name, identity]
+        character_list.append(marvel_character)
 
 def main():
     done = False
@@ -18,7 +24,7 @@ def main():
         another_character = input('Would you like to enter another character? (y/n): ')
         if another_character.lower() != 'y':
             done = True
-    print(character_list)
+    write_characters(character_list)
 
 if __name__ == "__main__":
     main()
